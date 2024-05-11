@@ -1,0 +1,15 @@
+services:
+  monopoly:
+    image: mariadb:latest
+    container_name: monopoly
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: "Password123!"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    
+volumes:
+  db_data:

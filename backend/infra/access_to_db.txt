@@ -1,0 +1,2 @@
+// COPY THIS TO YOUR TERMINAL TO ACCESS THE DATABASE
+docker-compose exec monopoly mariadb --user root -pPassword123!
